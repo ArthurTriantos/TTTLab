@@ -33,6 +33,10 @@ body {
     justify-content: space-around;
 }
 
+.status span {
+    color: white;
+}
+
 .reset {
     cursor: pointer;
 }
@@ -67,5 +71,6 @@ body {
 
 .o::after {
     content: '○';
+    color: white;
     font-size: 225px;
 }
