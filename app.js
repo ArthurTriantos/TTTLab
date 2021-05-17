@@ -88,33 +88,34 @@ const handleWin = (letter) => {
       statusDiv.innerHTML = `<span>${oSymbol} is next</span>`;
     }
   }
-}
-
-
-
-
-//even Handlers
-const handleReset = (e) => {
-    console.log(e);
 };
+
+
+// event Handlers
+const handleReset = () => {
+    xIsNext = true;
+    statusDiv.innerHTML = `${xSymbol} is next`;
+    for (const cellDiv of cellDivs) {
+      cellDiv.classList.remove('x');
+      cellDiv.classList.remove('o');
+      cellDiv.classList.remove('won');
+    }
+    gameIsLive = true;
+  };
 
 const handleCellClick = (e) => {
     const classList = e.target.classList;
-    const location = classList[1];
     
-    if (classList[2] === 'x' || classList[2] === 'o') {
+    if (classList[1] === 'x' || classList[1] === 'o') {
         return;
     }
 
     if (xIsNext) {
         classList.add('x');
         checkGameStatus();
-
-        xIsNext = !xIsNext;
     } else {
         classList.add('o');
         checkGameStatus();
-        xIsNext = !xIsNext;
     }
 };
 
