@@ -5,7 +5,67 @@
 }
 
 body {
+    color: #545454;
     display: flex;
     font-family: sans-serif;
     justify-content: center;
+}
+
+.container {
+    background: #14BDAC;
+    margin: 50px;
+    padding: 50px;
+    border-radius: 25px;
+}
+
+.title {
+    text-align: center;
+}
+
+.title span {
+    color: #f2ebd3;
+}
+
+.status-action {
+    display: flex;
+    margin-top: 25px;
+    font-size: 25px;
+    justify-content: space-around;
+}
+
+.reset {
+    cursor: pointer;
+}
+
+.reset:hover {
+    color: #f2ebd3;
+}
+
+.game-grid {
+    background: #0DA192;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 15px;
+    margin-top: 50px;
+}
+
+.game-cell {
+    background: #14BDAC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    height: 200px;
+    width: 200px;
+}
+
+.x::before {
+    content: '×';
+    font-size: 200px;
+}
+
+.o::after {
+    content: '○';
+    font-size: 225px;
 }
